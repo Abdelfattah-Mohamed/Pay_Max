@@ -1,0 +1,24 @@
+<div class="container">
+<div class="panel panel-defult" style="background-color: #d9d9d9">
+  <div class="panel-heading"><h2>Forgot your password?</h2></div>
+  <div class="panel-body">
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email address"  %>
+  </div>
+
+  <div class="actions">
+  	<br>
+    <%= f.submit "Send me reset password", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+</div>
+  <div class="panel-footer">
+     <%= render "devise/shared/links" %> 
+  </div>
+</div>
+</div>

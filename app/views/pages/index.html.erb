@@ -1,0 +1,64 @@
+<div>
+	<div class="hovereffect">
+		<img class="pho2" <%= image_tag("home.jpg", :alt => "Mostafa") %>>
+		<div class="overlay">
+			<h1> Prevention is better than cure </h1>
+			<h2> contact wih us to have all our servies </h2>
+			<% if user_signed_in? %>
+			<%= link_to "Log out", destroy_user_session_path, class: 'btn btn-primary', method: :delete %>
+			<%else %>
+			<%= link_to "login", new_user_session_path, class: 'btn btn-defult' %>
+			<button type="button" class="btn btn-info"><%= link_to "Sign Up", new_user_registration_path%></button>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<center>
+	<div class= "sd row">
+		<div class="column c1" style="background-color:#e2f6cd;">
+			<br>
+			<form >
+				<button onclick="window.open('http://www.500500egypt.org/')" type="button" class="btn btn-outline-primary">المعهد القومي للأورام الجديد </button>
+			</form>
+		</div>
+		<div class="column" style="background-color:#f2f2f1;">
+			<br>
+			<button  onclick="window.open('http://www.mohp.gov.eg/')" type="button" class="btn btn-outline-primary">وزارة الصحة والسكان</button>
+		</div>
+		<div class="column" style="background-color:#cff4ec;">
+			<br>
+			<form >
+				<button onclick="window.open('https://www.57357.org/donation/')" type="button" class="btn btn-outline-primary">مستشفي 57357 </button>
+			</form>
+		</div>
+	</div>
+</center>
+<center>
+	<div class= "row">
+		<div class="column" style="background-color:#cff4ec;">
+			<br>
+			<form >
+				<button onclick="window.open('http://www.nccvh.org.eg/')" type="button" class="btn btn-outline-primary">اللجنة القومية لمكافحة الفيروسات الكبدية</button>
+			</form>
+		</div>
+		<div class="column" style="background-color:#f2f2f1;">
+			<br>
+			<form >
+				<button onclick="window.open('https://shefaorman.org/')" type="button" class="btn btn-outline-primary">مستشفي شفاء الأورمان </button>
+			</form>
+		</div>
+		<div class="column" style="background-color:#e2f6cd;">
+			<br>
+			<form >
+				<button onclick="window.open('http://www.myf-egypt.org/ar/index.php')" type="button" class="btn btn-outline-primary"> مؤسسة مجدي يعقوب </button>
+			</form>
+		</div>
+	</div>
+	<hr>
+	<div class="text-center">
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<p> &copy;BayMax All Rights Reserved.</p>
+	</div>
+</center>

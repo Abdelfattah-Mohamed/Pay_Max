@@ -1,0 +1,7 @@
+<%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+<div class= "well">
+	<%= f.text_field :content, autofocus: true, class: "form-control", placeholder: "New Todo" %>
+	<br>
+	<%= f.submit class: "btn btn-primary"%> 
+</div>
+<% end %>

@@ -1,0 +1,28 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<div class="well" style="text-align: center">
+
+  <h2>Title:</h2>
+  <h4><%= @todo_list.title %></h4>
+
+  <h2>Description:</h2>
+  <h4><%= @todo_list.description %></h4>
+
+</div>
+
+
+<div class="well">
+	<%= render @todo_list.todo_items %>
+</div>
+
+<div id="form">
+	<%= render "todo_items/form" %>
+</div>
+
+
+<div class="well">
+<%= link_to 'Edit', edit_todo_list_path(@todo_list), class:"btn btn-defult" %> |
+<%= link_to 'Back', todo_lists_path, class:"btn btn-defult"  %>
+</div>
+</div>
